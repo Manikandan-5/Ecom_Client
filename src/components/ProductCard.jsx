@@ -209,7 +209,7 @@ const ProductCard = ({ product }) => {
         </div>
 
         <span className="text-xs text-gray-600">
-          ({product.reviews?.length || 0})
+          ({product.reviews?.length || 4})
         </span>
       </div>
     );
