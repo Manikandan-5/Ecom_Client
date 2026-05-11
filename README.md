@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+Ecommerce CRUD Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project Overview
 
-## Available Scripts
+This project is a full-stack Ecommerce CRUD application built using the MERN stack.
 
-In the project directory, you can run:
+The application supports two roles:
+Admin
+User (Consumer)
 
-### `npm start`
+The system allows admins to manage products and users while consumers can browse products and manage their cart.
+Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Frontend
+React.js
+React Router DOM
+Tailwind CSS
+Context API
+Axios
+React Hot Toast
+Lucide React Icons
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Backend
+Node.js
+Express.js
 
-### `npm test`
+MongoDB
+Mongoose
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+JWT Authentication
+bcryptjs
 
-### `npm run build`
+Testing
+Jest
+Supertest
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Features
+Authentication
+User Registration
+User Login
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+JWT Authentication
+Protected Routes
+Role-Based Authorization
+Admin Route Protection
+Admin Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Admins can:
+Create Products
+View All Products
+Update Products
+Delete Products
+View Registered Users
+User Features
 
-### `npm run eject`
+Users can:
+View Products
+Add Products to Cart
+Remove Products from Cart
+Persistent Cart using LocalStorage
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Product Features
+Each product contains:
+Category
+Brand
+Product Name
+Description
+Price
+Discount
+Sizes
+Reviews
+Stock
+Product Image
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Advanced Features
+Product Search and Pagination
+Implemented advanced product search and pagination using:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Mongoose Pagination Plugin
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+AI Product Assistant
+Implemented an AI-style product assistant modal where users can:
+Ask questions about products
+Receive dynamic product-related responses
 
-## Learn More
+Backend API:
+POST /api/ai/generate-description
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Security Features
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+JWT Token Authentication
+Password Hashing using bcrypt
+Admin Authorization Middleware
+Protected Backend Routes
+Protected Frontend Routes
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Backend .env
+Environment
+MONGO_URI=your_mongodb_url
+JWT_SECRET=your_secret_key
+API=your_key
