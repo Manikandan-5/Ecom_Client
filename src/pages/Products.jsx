@@ -70,16 +70,13 @@ const Products = () => {
       const response = await api.get(`/products?page=${currentPage}&limit=${LIMIT}`);
       const data = response.data;
 
-      console.log("API PRODUCTS:", data.products);
 
       // SAFE PRODUCTS
       const safeProducts = (data.products || []).filter((item) => item && item._id);
       
       // Log all categories from database
       const categories = [...new Set(safeProducts.map(p => p.category))];
-      console.log("Categories in database:", categories);
-      console.log("Kids products:", safeProducts.filter(p => p.category === "Kids" || p.category?.toLowerCase() === "kids"));
-
+   
       setProducts(safeProducts);
       setFilteredProducts(safeProducts);
       setTotalPages(data.totalPages || 1);
@@ -94,10 +91,6 @@ const Products = () => {
   const filterProducts = () => {
     let filtered = Array.isArray(products) ? [...products] : [];
 
-    console.log("=== FILTERING PRODUCTS ===");
-    console.log("Selected Category:", selectedCategory);
-    console.log("Total products before filter:", filtered.length);
-
     // CATEGORY FILTER - FIXED
 
     if (selectedCategory !== "all") {
@@ -111,13 +104,10 @@ const Products = () => {
         
         const matches = dbCategoryNorm === selectedNorm;
         
-        console.log(`Product: ${product.name}, Raw: "${dbCategoryRaw}", Normalized: "${dbCategoryNorm}", Selected: "${selectedNorm}", Matches: ${matches}`);
-        
         return matches;
       });
     }
 
-    console.log("Products after category filter:", filtered.length);
   // SORTING
 
     switch (sortBy) {
