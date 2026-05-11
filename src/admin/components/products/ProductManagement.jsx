@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Plus, Search } from "lucide-react";
-
+import toast from "react-hot-toast";
 import api from "../../api/axios";
 
 import ProductCard from "./ProductCard";

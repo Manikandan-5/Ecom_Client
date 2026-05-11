@@ -1,7 +1,7 @@
 import { useState } from "react";
 import API from "../api/axios";
 import { useNavigate } from "react-router-dom";
-
+import toast from "react-hot-toast";
 const Register = () => {
   const navigate = useNavigate();
 

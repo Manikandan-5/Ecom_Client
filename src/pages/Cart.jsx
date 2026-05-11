@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import { Trash2, Plus, Minus, ShoppingBag, ArrowLeft } from "lucide-react";
 import api from '../api/axios'
+import toast from "react-hot-toast";
 const Cart = () => {
   const { cart, removeFromCart, updateQuantity, totalItems, totalAmount } = useContext(CartContext);
  
